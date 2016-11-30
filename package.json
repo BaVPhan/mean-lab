@@ -1,0 +1,25 @@
+{
+  "name": "mean-lab",
+  "version": "1.0.0",
+  "description": "## Prompt",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongoose": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaVPhan/mean-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaVPhan/mean-lab/issues"
+  },
+  "homepage": "https://github.com/BaVPhan/mean-lab#readme"
+}
