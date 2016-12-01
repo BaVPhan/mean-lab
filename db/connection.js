@@ -1,17 +1,21 @@
-var mongoose = require("mongoose")
-var RecipeSchema = new mongoose.Schema(
-  {
-    name: String,
-    ingredient: [IngredientSchema]
-  }
-);
+var mongoose = require('mongoose')
+var conn = mongoose.connect('mongodb://localhost/recipefinder')
 
-var IngredientSchema = new mongoose.Schema(
-  {
-    names: String
-  }
-);
-var Recipe = mongoose.model("Recipe", RecipeSchema)
-var Ingredient = mongoose.model("Ingredient", IngredientSchema)
-mongoose.connect("mongodb://localhost/recipefinder")
-module.exports = mongoose;
+var Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId
+
+
+var IngredientSchema = new Schema({
+  name: String
+})
+
+
+var RecipeSchema = new Schema({
+  name: String,
+  ingredients: [IngredientSchema]
+})
+
+// setting models in mongoose utilizing schemas defined above, we'll be using
+// these frequently throughout our app
+mongoose.model("Recipe", RecipeSchema)
+mongoose.model("Ingredient", IngredientSchema)
