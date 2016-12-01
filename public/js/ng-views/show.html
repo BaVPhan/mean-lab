@@ -1,0 +1,12 @@
+<div ng-if="!vm.recipe">
+  <h2>THAT RECIPE SUCKS/DOESN'T EXIST</h2>
+</div>
+
+<div ng-if="vm.recipe">
+  <h2>{{vm.recipe.name}} for the best brunch on earth!</h2>
+  <div class="edit-recipe">
+  <input type="text" ng-model="vm.recipe.name" placeholder="Name" />
+  <button data-ng-click="vm.destroy()">THROW INTO TRASH</button>
+  <a href="#/recipes">Show Recipes</button>
+  </div>
+</div>

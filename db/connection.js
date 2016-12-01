@@ -15,7 +15,6 @@ var RecipeSchema = new Schema({
   ingredients: [IngredientSchema]
 })
 
-// setting models in mongoose utilizing schemas defined above, we'll be using
-// these frequently throughout our app
+
 mongoose.model("Recipe", RecipeSchema)
 mongoose.model("Ingredient", IngredientSchema)
